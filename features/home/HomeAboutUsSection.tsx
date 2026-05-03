@@ -6,7 +6,7 @@ export default function HomeAboutUsSection() {
         <section className="w-full max-w-[1440px] min-h-[950px] h-auto bg-[#FFFFFF] flex items-center justify-center">
             <div className="w-full max-w-[1216px] min-h-[710px] h-auto flex items-center justify-between">
                 <ImageCard 
-                    className="w-full max-w-[568px] min-h-[710px] h-auto bg-amber-200" 
+                    className="w-full max-w-[568px] min-h-[710px] h-auto" 
                     imageSrc="../../images/about/about-team.svg"
                     width={568}
                     height={710}

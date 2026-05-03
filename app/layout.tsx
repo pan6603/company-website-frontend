@@ -31,7 +31,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased flex flex-col justify-between`}
     >
  
-      <body className="min-h-full flex flex-col">
+      <body className="min-h-screen flex flex-col">
         <HomePageHeader />
         {children}
         <HomePageFooter />
