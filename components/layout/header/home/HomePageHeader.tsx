@@ -23,7 +23,9 @@ export default function HomePageHeader() {
                         className={pathname === "/about" ? "text-[14px] font-medium text-[#1D4ED8] border-b-2 border-[#1D4ED8]" : "text-[14px] font-medium text-slate-600"}>About</Link>
                         
                     <Link href="/services" className="text-[14px] font-medium text-slate-600">Services</Link>
-                    <Link href="/contact" className="text-[14px] font-medium text-slate-600">Contact</Link>
+                    <Link 
+                        href="/contact" 
+                        className={pathname === "/contact" ? "text-[14px] font-medium text-[#1D4ED8] border-b-2 border-[#1D4ED8]" : "text-[14px] font-medium text-slate-600"}>Contact</Link>
                 </nav>
 
                 {/* CTA 버튼 */}
