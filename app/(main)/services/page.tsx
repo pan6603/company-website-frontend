@@ -1,10 +1,14 @@
-
+import ServicesHeroSection from "@/features/service/hero/ServicesHeroSection"
+import ServicesGridSection from "@/features/service/grid-section/ServicesGridSection"
+import ServicesCTASection from "@/features/service/cta/ServicesCTASection"
 
 
 export default function Services() {
     return (
-        <div>
-            <h1>Services</h1>
-        </div>
+        <>
+            <ServicesHeroSection />
+            <ServicesGridSection />
+            <ServicesCTASection />
+        </>
     )
 }

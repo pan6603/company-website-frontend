@@ -3,6 +3,13 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation";
 
+const NAV_ITEMS = [
+  { href: "/", label: "Home" },
+  { href: "/about", label: "About" },
+  { href: "/services", label: "Services" },
+  { href: "/contact", label: "Contact" },
+];
+
 
 export default function HomePageHeader() {
     const pathname = usePathname();
@@ -14,18 +21,20 @@ export default function HomePageHeader() {
 
                 {/* Navbar */}
                 <nav className="w-full max-w-[434px] min-h-[26px] h-auto flex items-center justify-between">
-                    <Link 
-                        href="/" 
-                        className={pathname === "/" ? "text-[14px] font-medium text-[#1D4ED8] border-b-2 border-[#1D4ED8]" : "text-[14px] font-medium text-slate-600"}>Home</Link>
+                    {NAV_ITEMS.map((item) => {
+                        const isActive = pathname === item.href;
 
-                    <Link 
-                        href="/about" 
-                        className={pathname === "/about" ? "text-[14px] font-medium text-[#1D4ED8] border-b-2 border-[#1D4ED8]" : "text-[14px] font-medium text-slate-600"}>About</Link>
-                        
-                    <Link href="/services" className="text-[14px] font-medium text-slate-600">Services</Link>
-                    <Link 
-                        href="/contact" 
-                        className={pathname === "/contact" ? "text-[14px] font-medium text-[#1D4ED8] border-b-2 border-[#1D4ED8]" : "text-[14px] font-medium text-slate-600"}>Contact</Link>
+                        return (
+                            <Link 
+                                key={item.href} 
+                                href={item.href} 
+                                className={`border-b-2 text-[14px] font-medium transition-colors ${
+                                    isActive ? "border-[#1D4ED8] text-[#1D4ED8]" : "border-transparent text-slate-600 hover:text-[#1D4ED8]"
+                                }`}>
+                                    {item.label}
+                                </Link>
+                        )
+                    })}   
                 </nav>
 
                 {/* CTA 버튼 */}
