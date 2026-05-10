@@ -4,7 +4,7 @@ import CTAButton from "@/components/ui/button/CTAButton"
 
 export default function ServiceContentPanel() {
     return (
-        <div className="w-full max-w-[607px] min-h-[606px] h-auto bg-[#F2F3FE] px-12 py-[147px] flex flex-col gap-6">
+        <div className="w-full max-w-[607px] min-h-[607px] h-auto bg-[#F2F3FE] px-12 py-[147px] flex flex-col gap-6">
             <div className="w-full max-w-[511px] min-h-[28px] h-auto">
                 <span className="text-[12px] font-semibold text-[#00327D]">TRANSFORMATION</span>
             </div>
