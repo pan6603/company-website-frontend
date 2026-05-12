@@ -10,6 +10,7 @@ export default function HomeHeroContent() {
                     Architecting the Future of <br />
                     Professional Excellence.
                 </h1>
+                
                 <p className="text-[18px] font-normal text-[#505F76]">
                     We provide institutional-grade solutions for high-level decision makers. Our <br />
                     strategic frameworks enable global enterprises to navigate complex markets <br />

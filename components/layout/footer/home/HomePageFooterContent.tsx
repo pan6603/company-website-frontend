@@ -5,7 +5,17 @@ import HomePageFooterNewsletter from "@/components/layout/footer/home/HomePageFo
 
 export default function HomePageFooterContent() {
     return (
-        <div className="w-full max-w-[1280px] min-h-[186px] h-auto bg-[#F8FAFC] px-8 flex items-center justify-between">
+        <div className="
+            hidden
+            w-full 
+            lg:max-w-[1280px]
+            lg:min-h-[186px]
+            h-auto
+            lg:px-8
+            lg:items-center
+            lg:justify-between 
+            lg:flex
+        ">
             <HomePageFooterBrandColumn />
             <HomePageFooterQuickLinks />
             <HomePageFooterServicesLinks />

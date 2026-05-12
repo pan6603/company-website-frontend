@@ -3,7 +3,17 @@ import Avatar from "@/components/ui/avatar/Avatar"
 
 export default function HomeTestimonialSection() {
     return (
-        <section className="w-full max-w-[1440px] min-h-[758px] h-auto bg-[#F2F3FF] flex items-center justify-center">
+        <section className="
+            hidden
+            lg:flex 
+            w-full 
+            lg:max-w-[1440px]
+            lg:min-h-[758px]
+            lg:h-auto 
+            lg:bg-[#F2F3FF] 
+            lg:items-center 
+            lg:justify-center
+        ">
             <div className="w-full max-w-[896px] min-h-[518px] h-auto flex flex-col items-center justify-between">
                 <QuoteIcon 
                     className="w-full max-w-[48px] min-h-[58px] h-auto flex items-center justify-center"  
