@@ -21,7 +21,7 @@ export default function HomeMoblieAboutProfileCards() {
             {PROFILE_CARDS.map((card) => (
                 <HomeMoblieProfileCard 
                     key={card.title}
-                    className="w-full min-h-[192px] h-auto bg-amber-500 relative"
+                    className="w-full min-h-[192px] h-auto relative"
                     imageSrc={card.imageSrc}
                     title={card.title}
                     description={card.description}
