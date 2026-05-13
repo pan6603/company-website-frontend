@@ -28,7 +28,7 @@ export default function AboutMoblieHeroSection() {
                     transitions with absolute precision.
                 </p>
 
-                <div className="w-full min-h-[272px] h-auto bg-blue-400">
+                <div className="w-full min-h-[272px] h-auto">
                     <Image
                         src="../../../../../images/about/about-mobile-hero-image.svg"
                         alt="about-mobile-hero-image"
