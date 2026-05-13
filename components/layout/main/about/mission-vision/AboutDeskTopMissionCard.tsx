@@ -1,6 +1,6 @@
 import CardIcon from "@/components/ui/icons/CardIcon"
 
-export default function AboutMissionCard() {
+export default function AboutDeskTopMissionCard() {
     return (
         <div className="w-full max-w-[575px] min-h-[333px] h-auto bg-[#FFFFFF] p-8 border border-[#C3C6D5]/30">
             

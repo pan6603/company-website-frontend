@@ -1,4 +1,4 @@
-import AboutTimelineItem from "@/features/about/time-line/AboutTimelineItem";
+import AboutTimelineItem from "@/components/layout/main/about/time-line/AboutTimelineItem";
 
 const items = [
   {

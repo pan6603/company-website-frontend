@@ -2,7 +2,7 @@ import CardIcon from "@/components/ui/icons/CardIcon"
 
 
 
-export default function AboutVisionCard() {
+export default function AboutDeskTopVisionCard() {
     return (
         <div className="w-full max-w-[575px] min-h-[333px] h-auto p-8 border border-[#C3C6D5]/30">
             <div className="w-full max-w-[48px] min-h-[72px] h-auto">
