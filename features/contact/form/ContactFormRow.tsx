@@ -1,4 +1,4 @@
-import ContactInputField from "@/components/layout/main/contact/ContactInputField"
+import ContactInputField from "@/components/layout/main/contact/input/ContactInputField"
 
 const fields = [
   {
