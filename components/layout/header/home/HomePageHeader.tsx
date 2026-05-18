@@ -2,19 +2,24 @@
 
 import Link from "next/link"
 import { usePathname } from "next/navigation";
+import { useState } from "react";
 import HamburgerButton from "@/components/layout/header/home/HamburgerButton";
 import CTAButton from "@/components/ui/button/CTAButton";
+import HamburgerMenuPopup from "@/components/layout/header/home/HamburgerMenuPopup";
+
 
 const NAV_ITEMS = [
   { href: "/", label: "Home" },
-  { href: "/about", label: "About" },
+  { href: "/about", label: "About Us" },
   { href: "/services", label: "Services" },
+  { href: "/portfolio", label: "Portfolio" },
   { href: "/contact", label: "Contact" },
 ];
 
 
 export default function HomePageHeader() {
     const pathname = usePathname();
+    const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
         <header className="w-full h-[65px] lg:h-[81px] bg-[#FFFFFF] flex items-center justify-center">
@@ -44,8 +49,15 @@ export default function HomePageHeader() {
                     text="Get Started"
                 />
                 
-                <HamburgerButton />                
+                <HamburgerButton onClick={() => setIsMobileMenuOpen(true)} />
             </div>
+
+            {isMobileMenuOpen && (
+                <HamburgerMenuPopup
+                    navItems={NAV_ITEMS}
+                    onClose={() => setIsMobileMenuOpen(false)}
+                />
+            )}
         </header>
     )
 }
