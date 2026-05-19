@@ -5,14 +5,17 @@ type ContactMoblieInputFieldProps = {
     label?: string;
     inputClassName?: string;
     placeholder?: string;
+    name?: string;
+    value?: string;
+    onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 
-export default function ContactMoblieInputField({ className, label, inputClassName, placeholder }: ContactMoblieInputFieldProps) {
+export default function ContactMoblieInputField({ className, label, inputClassName, placeholder, name, value, onChange }: ContactMoblieInputFieldProps) {
     return (
         <div className={className}>
             {label && <label className="font-bold text-[12px] text-[#737784]">{label}</label>}
-            <input className={inputClassName} placeholder={placeholder} />
+            <input className={inputClassName} placeholder={placeholder} name={name} value={value} onChange={onChange}/>
         </div>
     )
 }
