@@ -15,3 +15,7 @@
 
 ### 테스트 도메인 
 https://company-website-frontend-lbr7.vercel.app/
+
+
+### 실제 운영 서비스 배포
+limchaeseong.com
