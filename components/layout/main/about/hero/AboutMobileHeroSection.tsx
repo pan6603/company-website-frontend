@@ -1,6 +1,6 @@
 import Image from "next/image"
 
-export default function AboutMoblieHeroSection() {
+export default function AboutMobileHeroSection() {
     return (
         <section className="
             w-full

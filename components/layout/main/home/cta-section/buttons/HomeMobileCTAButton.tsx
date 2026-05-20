@@ -2,7 +2,7 @@ import Link from "next/link"
 
 
 
-export default function HomeMoblieCTAButton() {
+export default function HomeMobileCTAButton() {
     return (
         <Link 
             href="#" 

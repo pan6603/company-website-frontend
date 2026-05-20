@@ -1,4 +1,4 @@
-import HomeMoblieCTAButton from "@/components/layout/main/home/cta-section/buttons/HomeMoblieCTAButton"
+import HomeMobileCTAButton from "@/components/layout/main/home/cta-section/buttons/HomeMobileCTAButton"
 import HomeDeskTopCTAButtons from "@/components/layout/main/home/cta-section/buttons/HomeDeskTopCTAButtons"
 
 
@@ -7,7 +7,7 @@ import HomeDeskTopCTAButtons from "@/components/layout/main/home/cta-section/but
 export default function HomeSizeCTAButtons() {
     return (
         <>
-            <HomeMoblieCTAButton />
+            <HomeMobileCTAButton />
             <HomeDeskTopCTAButtons />
         </>
     )

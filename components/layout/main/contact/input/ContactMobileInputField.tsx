@@ -1,6 +1,6 @@
 
 
-type ContactMoblieInputFieldProps = {
+type ContactMobileInputFieldProps = {
     className?: string;
     label?: string;
     inputClassName?: string;
@@ -11,7 +11,7 @@ type ContactMoblieInputFieldProps = {
 }
 
 
-export default function ContactMoblieInputField({ className, label, inputClassName, placeholder, name, value, onChange }: ContactMoblieInputFieldProps) {
+export default function ContactMobileInputField({ className, label, inputClassName, placeholder, name, value, onChange }: ContactMobileInputFieldProps) {
     return (
         <div className={className}>
             {label && <label className="font-bold text-[12px] text-[#737784]">{label}</label>}

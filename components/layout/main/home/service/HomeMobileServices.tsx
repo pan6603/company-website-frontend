@@ -1,4 +1,4 @@
-import HomeMoblieServiceTitle from "@/components/layout/main/home/service/titles/HomeMoblieServiceTitle"
+import HomeMobileServiceTitle from "@/components/layout/main/home/service/titles/HomeMobileServiceTitle"
 import HomeServiceCard from "@/components/ui/card/HomeServiceCard"
 
 const SERVICES = [
@@ -25,11 +25,11 @@ const SERVICES = [
 const CARD_CLASS =
   "w-full min-h-[248px] h-auto bg-[#FFFFFF] border border-[#F1F5F9] p-[32px] rounded-[8px] flex flex-col gap-[15px]"
 
-export default function HomeMoblieServices() {
+export default function HomeMobileServices() {
     return (
         <section className="w-full min-h-[1037px] h-auto bg-[#F2F3FF] px-[24px] py-[64px] lg:hidden">
             <div className="w-full min-h-[910px] h-auto flex flex-col items-center justify-between">
-                <HomeMoblieServiceTitle />
+                <HomeMobileServiceTitle />
 
                 <div className="w-full min-h-[794px] h-auto flex flex-col items-center justify-between">
                     {SERVICES.map((service) => ( 

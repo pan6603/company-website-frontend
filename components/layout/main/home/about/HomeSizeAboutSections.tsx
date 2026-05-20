@@ -1,4 +1,4 @@
-import HomeMoblieAboutSection from "@/components/layout/main/home/about/HomeMoblieAboutSection"
+import HomeMobileAboutSection from "@/components/layout/main/home/about/HomeMobileAboutSection"
 import HomeDeskTopAboutSection from "@/components/layout/main/home/about/HomeDeskTopAboutSection"
 
 
@@ -6,7 +6,7 @@ import HomeDeskTopAboutSection from "@/components/layout/main/home/about/HomeDes
 export default function HomeSizeAboutSections() {
     return (
         <>
-            <HomeMoblieAboutSection />
+            <HomeMobileAboutSection />
             <HomeDeskTopAboutSection />
         </>
     )

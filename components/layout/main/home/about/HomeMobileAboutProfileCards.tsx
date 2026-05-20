@@ -1,4 +1,4 @@
-import HomeMoblieProfileCard from "@/components/layout/main/home/about/HomeMoblieProfileCard"
+import HomeMobileProfileCard from "@/components/layout/main/home/about/HomeMobileProfileCard"
 
 const PROFILE_CARDS = [
   {
@@ -13,13 +13,13 @@ const PROFILE_CARDS = [
   },
 ]
 
-export default function HomeMoblieAboutProfileCards() {
+export default function HomeMobileAboutProfileCards() {
     return (
         <div className="w-full min-h-[400px] h-auto flex flex-col justify-between gap-[16px]">
 
 
             {PROFILE_CARDS.map((card) => (
-                <HomeMoblieProfileCard 
+                <HomeMobileProfileCard 
                     key={card.title}
                     className="w-full min-h-[192px] h-auto relative"
                     imageSrc={card.imageSrc}

@@ -1,4 +1,4 @@
-import HomeMoblieCTAContent from "@/components/layout/main/home/cta-section/contents/HomeMoblieCTAContent"
+import HomeMobileCTAContent from "@/components/layout/main/home/cta-section/contents/HomeMobileCTAContent"
 import HomeDeskTopCTAContent from "@/components/layout/main/home/cta-section/contents/HomeDeskTopCTAContent"
 
 
@@ -6,7 +6,7 @@ import HomeDeskTopCTAContent from "@/components/layout/main/home/cta-section/con
 export default function HomeSizeCTAContents() {
     return (
         <>
-            <HomeMoblieCTAContent />
+            <HomeMobileCTAContent />
             <HomeDeskTopCTAContent />
         </>
     )

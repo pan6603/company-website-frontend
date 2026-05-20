@@ -1,4 +1,4 @@
-import HomeMoblieCTATitle from "@/components/layout/main/home/cta-section/titles/HomeMoblieCTATitle"
+import HomeMobileCTATitle from "@/components/layout/main/home/cta-section/titles/HomeMobileCTATitle"
 import HomeDeskTopCTATitle from "@/components/layout/main/home/cta-section/titles/HomeDeskTopCTATitle"
 
 
@@ -6,7 +6,7 @@ import HomeDeskTopCTATitle from "@/components/layout/main/home/cta-section/title
 export default function HomeSizeCTATitles() {
     return (
         <>
-            <HomeMoblieCTATitle />
+            <HomeMobileCTATitle />
             <HomeDeskTopCTATitle />
         </>
     )

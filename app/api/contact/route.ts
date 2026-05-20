@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req: Request) {
   try {
-    const { name, email, message } = await req.json();
+    const { name, email, subject, message } = await req.json();
 
     if (!name || !email || !message) {
       return NextResponse.json(
@@ -17,12 +17,9 @@ export async function POST(req: Request) {
     const { data, error } = await resend.emails.send({
       from: "Contact Form <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL!,
-      subject: `새 문의가 도착했습니다: ${name}`,
+      subject: subject ? `새 문의: ${subject}` : `새 문의가 도착했습니다: ${name}`,
       replyTo: email,
-      text: `
-      이름: ${name} 
-      이메일: ${email}
-      문의 내용:${message}`,
+      text: `이름: ${name}\n이메일: ${email}\n제목: ${subject || "(없음)"}\n\n문의 내용:\n${message}`,
     });
 
     if (error) {

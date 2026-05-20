@@ -2,7 +2,7 @@ import CTAButton from "@/components/ui/button/CTAButton"
 
 
 
-export default function AboutMoblieContactCTA() {
+export default function AboutMobileContactCTA() {
     return (
         <section 
             className="

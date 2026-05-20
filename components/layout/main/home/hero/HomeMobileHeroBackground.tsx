@@ -1,7 +1,7 @@
 import Image from "next/image"
 
 
-export default function HomeMoblieHeroBackground() {
+export default function HomeMobileHeroBackground() {
     return (
         <div className="w-full min-h-[288px] h-auto rounded-lg">
             <Image 

@@ -3,7 +3,7 @@
 
 
 
-export default function HomeMoblieCTAContent() {
+export default function HomeMobileCTAContent() {
     return (
         <p className="
             block 

@@ -1,7 +1,7 @@
 import ServicesBadge from "@/components/layout/main/services/hero/ServicesBadge"
 import CTAButton from "@/components/ui/button/CTAButton"
 
-export default function ServicesMoblieHeroSection() {
+export default function ServicesMobileHeroSection() {
     return (
         <section 
             className="

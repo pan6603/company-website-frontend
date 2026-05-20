@@ -1,13 +1,13 @@
-import ContactDeskTopForm from "@/components/layout/main/contact/form/ContactDeskTopForm"
-import ContactMoblieForm from "@/components/layout/main/contact/form/ContactMoblieForm"
-import ContactMoblieInfoCards from "../../../components/layout/main/contact/form/ContactMoblieInfoCards"
+import ContactDeskTopForm from "@/components/layout/main/contact/form/ContactDeskTopForm";
+import ContactMobileForm from "@/components/layout/main/contact/form/ContactMobileForm";
+import ContactMobileInfoCards from "@/components/layout/main/contact/form/ContactMobileInfoCards";
 
 export default function ContactFormSection() {
-    return (
-        <>
-            <ContactDeskTopForm />
-            <ContactMoblieForm />
-            <ContactMoblieInfoCards />
-        </>
-    )
+  return (
+    <>
+      <ContactDeskTopForm />
+      <ContactMobileForm />
+      <ContactMobileInfoCards />
+    </>
+  );
 }

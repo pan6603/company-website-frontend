@@ -1,9 +1,9 @@
-import AboutMoblieMissionCard from "@/components/layout/main/about/mission-vision/AboutMoblieMissionCard"
-import AboutMoblieVisionCard from "@/components/layout/main/about/mission-vision/AboutMoblieVisionCard"
+import AboutMobileMissionCard from "@/components/layout/main/about/mission-vision/AboutMobileMissionCard"
+import AboutMobileVisionCard from "@/components/layout/main/about/mission-vision/AboutMobileVisionCard"
 
 
 
-export default function AboutMoblieMissionVisionSection() {
+export default function AboutMobileMissionVisionSection() {
     return (
         <section className="
             w-full 
@@ -17,8 +17,8 @@ export default function AboutMoblieMissionVisionSection() {
             lg:hidden
         ">
             <div className="w-full min-h-[640px] flex flex-col justify-between">
-                <AboutMoblieMissionCard />
-                <AboutMoblieVisionCard />
+                <AboutMobileMissionCard />
+                <AboutMobileVisionCard />
             </div>
         </section>
     )

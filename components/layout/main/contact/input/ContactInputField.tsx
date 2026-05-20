@@ -1,32 +1,40 @@
 import Input from "@/components/ui/input/Input";
 
 type ContactInputFieldProps = {
-    className?: string;
-    label?: string;
-    type?: React.HTMLInputTypeAttribute
-    placeholder?: string;
-}
+  className?: string;
+  label?: string;
+  type?: React.HTMLInputTypeAttribute;
+  placeholder?: string;
+  name?: string;
+  value?: string;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+};
 
-const inputStyle = "w-full max-w-[284px] min-h-[49px] h-auto bg-[#FFFFFF] border border-[#C3C6D5] rounded p-4 font-normal text-base text-[#6B7280]"
+const inputStyle =
+  "w-full max-w-[284px] min-h-[49px] h-auto bg-[#FFFFFF] border border-[#C3C6D5] rounded p-4 font-normal text-base text-[#6B7280]";
 
-export default function ContactInputField({ 
-    className = "", 
-    label, 
-    type = "text", 
-    placeholder = "" 
+export default function ContactInputField({
+  className = "",
+  label,
+  type = "text",
+  placeholder = "",
+  name,
+  value,
+  onChange,
 }: ContactInputFieldProps) {
-    return (
-        <div className={className}>
-            {label && 
-                <label className="font-semibold text-xs text-[#434653]">{label}</label>
-            }
-
-            <Input 
-                type={type} 
-                placeholder={placeholder}
-                className={inputStyle}
-            />
-            
-        </div>
-    )
+  return (
+    <div className={className}>
+      {label && (
+        <label className="font-semibold text-xs text-[#434653]">{label}</label>
+      )}
+      <Input
+        type={type}
+        placeholder={placeholder}
+        className={inputStyle}
+        name={name}
+        value={value}
+        onChange={onChange}
+      />
+    </div>
+  );
 }

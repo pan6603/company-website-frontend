@@ -21,7 +21,7 @@ const teamMembers = [
 
 
 
-export default function AboutMoblieTeam() {
+export default function AboutMobileTeam() {
     return (
         <section 
             className="

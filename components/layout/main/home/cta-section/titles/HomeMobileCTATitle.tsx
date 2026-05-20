@@ -2,7 +2,7 @@
 
 
 
-export default function HomeMoblieCTATitle() {
+export default function HomeMobileCTATitle() {
     return (
         <h2 className="
             text-[36px] 

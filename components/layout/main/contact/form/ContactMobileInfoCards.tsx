@@ -4,7 +4,7 @@ import CallIcon from "@/components/ui/icons/CallIcon"
 import MailIcon from "@/components/ui/icons/MailIcon"
 
 
-export default function ContactMoblieInfoCards() {
+export default function ContactMobileInfoCards() {
     return (
         <section 
             className="

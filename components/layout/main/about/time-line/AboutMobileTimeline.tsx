@@ -34,7 +34,7 @@ const timelineData = [
 ]
 
 
-export default function AboutMoblieTimeline() {
+export default function AboutMobileTimeline() {
     return (
         <section 
             className="

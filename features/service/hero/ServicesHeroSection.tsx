@@ -1,11 +1,11 @@
 import ServicesDeskTopHeroSection from "@/components/layout/main/services/hero/ServicesDeskTopHeroSection"
-import ServicesMoblieHeroSection from "@/components/layout/main/services/hero/ServicesMoblieHeroSection"
+import ServicesMobileHeroSection from "@/components/layout/main/services/hero/ServicesMobileHeroSection"
 
 export default function ServicesHeroSection() {
     return (
         <>
             <ServicesDeskTopHeroSection />
-            <ServicesMoblieHeroSection />
+            <ServicesMobileHeroSection />
         </>
 
     )

@@ -1,7 +1,7 @@
 
 
 
-export default function ContactMoblieHeroSection() {
+export default function ContactMobileHeroSection() {
     return (
         <section 
             className="

@@ -1,7 +1,7 @@
 import CTAButton from "@/components/ui/button/CTAButton";
-import HomeMoblieHeroBackground from "@/components/layout/main/home/hero/HomeMoblieHeroBackground";
+import HomeMobileHeroBackground from "@/components/layout/main/home/hero/HomeMobileHeroBackground";
 
-export default function HomeMoblieHeroSection() {
+export default function HomeMobileHeroSection() {
     return (
         <section className="w-full min-h-[804px] h-auto bg-[#FFFFFF] px-[24px] py-[64px] flex items-center justify-center lg:hidden">
             <div className="w-full min-h-[676px] h-auto flex flex-col gap-[15px]">
@@ -17,7 +17,7 @@ export default function HomeMoblieHeroSection() {
                     text="Get Started"
                 />
 
-                <HomeMoblieHeroBackground />
+                <HomeMobileHeroBackground />
 
             </div>
         </section>        

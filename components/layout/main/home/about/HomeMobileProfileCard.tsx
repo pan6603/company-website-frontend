@@ -1,5 +1,5 @@
 import Image from "next/image"
-type HomeMoblieProfileCardProps = {
+type HomeMobileProfileCardProps = {
     className?: string
     imageSrc?: string
     title?: string
@@ -7,7 +7,7 @@ type HomeMoblieProfileCardProps = {
 }
 
 
-export default function HomeMoblieProfileCard({ className, imageSrc, title, description }: HomeMoblieProfileCardProps) {
+export default function HomeMobileProfileCard({ className, imageSrc, title, description }: HomeMobileProfileCardProps) {
     return (
         <div className={className}>
             {imageSrc && 

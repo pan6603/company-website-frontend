@@ -1,6 +1,6 @@
 import MapPinIcon from "@/components/ui/icons/MapPinIcon"
 
-export default function ContactMoblieMapSection() {
+export default function ContactMobileMapSection() {
     return (
         <section className="w-full min-h-[305px] h-auto  bg-[#F2F3FF] p-8 flex flex-col justify-between lg:hidden">
             <h3 className="font-bold text-[24px] text-[#131B2E]">Corporate Excellence HQ</h3>

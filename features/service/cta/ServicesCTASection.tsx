@@ -1,12 +1,12 @@
 import ServicesDeskTopCTASection from "@/components/layout/main/services/cta/ServicesDeskTopCTASection"
-import ServicesMoblieCTASection from "@/components/layout/main/services/cta/ServicesMoblieCTASection"
+import ServicesMobileCTASection from "@/components/layout/main/services/cta/ServicesMobileCTASection"
 
 
 export default function ServicesCTASection() {
     return (
         <>
             <ServicesDeskTopCTASection />
-            <ServicesMoblieCTASection />
+            <ServicesMobileCTASection />
         </>
     )
 }

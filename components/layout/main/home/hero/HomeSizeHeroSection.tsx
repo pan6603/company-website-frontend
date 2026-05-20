@@ -1,5 +1,5 @@
 import HomeDeskTopHeroSection from "@/components/layout/main/home/hero/HomeDeskTopHeroSection"
-import HomeMoblieHeroSection from "@/components/layout/main/home/hero/HomeMoblieHeroSection"
+import HomeMobileHeroSection from "@/components/layout/main/home/hero/HomeMobileHeroSection"
 
 
 
@@ -7,7 +7,7 @@ export default function HomeSizeHeroSection() {
     return (
         <>
             <HomeDeskTopHeroSection />
-            <HomeMoblieHeroSection />
+            <HomeMobileHeroSection />
         </>
     )
 }

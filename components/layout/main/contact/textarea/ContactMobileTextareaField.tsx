@@ -1,6 +1,6 @@
 
 
-type ContactMoblieTextareaFieldProps = {
+type ContactMobileTextareaFieldProps = {
     className?: string;
     label?: string;
     textareaClassName?: string;
@@ -12,7 +12,7 @@ type ContactMoblieTextareaFieldProps = {
 
 
 
-export default function ContactMoblieTextareaField({ className, label, textareaClassName, placeholder, name, value, onChange }: ContactMoblieTextareaFieldProps) {
+export default function ContactMobileTextareaField({ className, label, textareaClassName, placeholder, name, value, onChange }: ContactMobileTextareaFieldProps) {
     return (
         <div className={className}>
             {label && <label className="font-bold text-[12px] text-[#737784]">{label}</label>}
