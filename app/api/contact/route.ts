@@ -14,7 +14,7 @@ export async function POST(req: Request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Contact Form <noreply@limchaeseong.com>",
+      from: "Contact Form <onboarding@resend.dev>",
       to: process.env.CONTACT_EMAIL!,
       subject: subject ? `새 문의: ${subject}` : `새 문의가 도착했습니다: ${name}`,
       replyTo: email,
@@ -22,11 +22,13 @@ export async function POST(req: Request) {
     });
 
     if (error) {
-      return NextResponse.json({ message: "메일 전송 실패" }, { status: 500 });
+      console.error("Resend error:", error);
+      return NextResponse.json({ message: "메일 전송 실패", error: error.message }, { status: 500 });
     }
 
     return NextResponse.json({ message: "문의가 전송되었습니다.", data });
-  } catch {
+  } catch (e) {
+    console.error("Contact API error:", e);
     return NextResponse.json(
       { message: "서버 오류가 발생했습니다." },
       { status: 500 }
