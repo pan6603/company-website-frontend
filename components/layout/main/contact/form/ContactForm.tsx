@@ -1,65 +1,27 @@
 "use client";
 
-import { useState } from "react";
 import ContactFormRow from "@/features/contact/form/ContactFormRow";
 import ContactFormField from "@/features/contact/form/ContactFormField";
 import ContactTextareaField from "@/components/layout/main/contact/textarea/ContactTextareaField";
 import ContactSubmitButton from "@/features/contact/form/ContactSubmitButton";
+import { useContactForm } from "@/components/layout/main/contact/form/useContactForm";
 
 export default function ContactForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        alert(data.message || "메일 전송 실패");
-        return;
-      }
-
-      alert("문의가 전송되었습니다.");
-      setFormData({ name: "", email: "", subject: "", message: "" });
-    } catch (error) {
-      console.error(error);
-      alert("서버 오류가 발생했습니다.");
-    }
-  };
+  const {
+    formData,
+    status,
+    errorMessage,
+    isSubmitting,
+    handleChange,
+    handleSubmit,
+  } = useContactForm();
 
   return (
     <div
       className="
-        w-full
-        max-w-[682px]
-        min-h-[576px]
-        h-auto
-        bg-[#FFFFFF]
-        border
-        border-[#C3C6D5]
-        rounded-lg
-        flex
-        items-center
-        justify-center
+        w-full max-w-[682px] min-h-[576px] h-auto
+        bg-white border border-[#C3C6D5] rounded-lg
+        flex items-center justify-center
       "
     >
       <form
@@ -82,7 +44,20 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
         />
-        <ContactSubmitButton />
+
+        {status === "success" && (
+          <div className="w-full p-4 bg-green-50 border border-green-200 rounded-lg">
+            <p className="font-semibold text-sm text-green-700">✓ 문의가 전송되었습니다.</p>
+            <p className="text-xs text-green-600 mt-1">빠른 시일 내에 회신 드리겠습니다.</p>
+          </div>
+        )}
+        {status === "error" && (
+          <div className="w-full p-4 bg-red-50 border border-red-200 rounded-lg">
+            <p className="font-semibold text-sm text-red-700">✕ {errorMessage}</p>
+          </div>
+        )}
+
+        <ContactSubmitButton disabled={isSubmitting} />
       </form>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useContactForm } from "@/components/layout/main/contact/form/useContactForm";
 import ContactMobileInputField from "@/components/layout/main/contact/input/ContactMobileInputField";
 import ContactMobileTextareaField from "@/components/layout/main/contact/textarea/ContactMobileTextareaField";
 
@@ -11,63 +11,8 @@ const inputClassName =
   "w-full min-h-[50px] h-auto bg-[#FAF8FF] border border-[#C3C6D5] text-[#6B7280] text-[16px] px-[16px]";
 
 export default function ContactMobileForm() {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    subject: "",
-    message: "",
-  });
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
-    const { name, value } = e.target;
-
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const handleSubmit = async (
-    e: React.FormEvent<HTMLFormElement>
-  ) => {
-    e.preventDefault();
-
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          subject: formData.subject,
-          message: formData.message,
-        }),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        alert(data.message || "메일 전송 실패");
-        return;
-      }
-
-      alert("문의가 전송되었습니다.");
-
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      console.error(error);
-      alert("서버 오류가 발생했습니다.");
-    }
-  };
+  const { formData, status, errorMessage, isSubmitting, handleChange, handleSubmit } =
+    useContactForm();
 
   return (
     <section
@@ -125,12 +70,25 @@ export default function ContactMobileForm() {
             onChange={handleChange}
           />
 
+          {status === "success" && (
+            <div className="w-full p-4 bg-green-50 border border-green-200 rounded-lg">
+              <p className="font-semibold text-sm text-green-700">✓ 문의가 전송되었습니다.</p>
+              <p className="text-xs text-green-600 mt-1">빠른 시일 내에 회신 드리겠습니다.</p>
+            </div>
+          )}
+          {status === "error" && (
+            <div className="w-full p-4 bg-red-50 border border-red-200 rounded-lg">
+              <p className="font-semibold text-sm text-red-700">✕ {errorMessage}</p>
+            </div>
+          )}
+
           <button
             type="submit"
-            className="w-full min-h-[46px] h-auto bg-[#00327D] rounded-lg flex items-center justify-center"
+            disabled={isSubmitting}
+            className="w-full min-h-[46px] h-auto bg-[#00327D] rounded-lg flex items-center justify-center disabled:opacity-50 disabled:cursor-not-allowed transition-opacity duration-200"
           >
             <span className="font-bold text-[14px] text-[#FFFFFF]">
-              Send Message
+              {isSubmitting ? "전송 중..." : "Send Message"}
             </span>
           </button>
         </form>
