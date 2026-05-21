@@ -10,6 +10,7 @@
 + Next.js
 + TypeScript
 + Vercel 배포
++ Namecheap
 
 
 
